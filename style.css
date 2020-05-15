@@ -1,0 +1,41 @@
+
+body{
+  margin: 0;
+  padding: 0;
+  background: url(1.jpg);
+  background-size: cover;
+  font-family: 'Orbitron', sans-serif;
+  letter-spacing: 10px;
+  text-align: center;
+}
+.neon{
+  position: absolute;
+  top: 30%;
+  left: 20%;
+  margin: 0;
+  padding: 0 10px;
+  font-size: 100px;
+  color: #fff;
+  text-shadow: 0 0 20px #ff005b;
+}
+.neon::after{
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 0 20px;
+  z-index: -1;
+  color: #ff005b;
+  filter: blur(15px);
+}
+.neon::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #fe3a80;
+  z-index: -2;
+  filter: blur(80px);
+}
